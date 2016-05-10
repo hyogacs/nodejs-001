@@ -15,6 +15,7 @@
     "serve-favicon": "~2.3.0",
     "oracledb":"*",
     "async":"*",
-    "es6-promise":"*"
+    "es6-promise":"*",
+    "node-json2html":"*"
   }
 }

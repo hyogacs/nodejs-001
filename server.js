@@ -4,9 +4,11 @@
 var http = require('http');
 var express = require('express');
 var morgan = require('morgan');
-var dbconfig = require('./server/dbconfig.js');
+var dbconfig = require('./conf/dbconfig.js');
 var database = require('./server/database.js');
 var api = require('./server/api.js');
+var routes = require('./routes/index');
+var users = require('./routes/users');
 var openHttpConnections = {};
 var app;
 var httpServer;
@@ -38,6 +40,7 @@ function initApp() {
     app.use(morgan('combined')); //logger
 
     app.use('/api', api.getRouter());
+    app.use('/users', users);
 
     app.use(handleError);
 
