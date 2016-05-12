@@ -15,6 +15,9 @@ router.get('/', function(req, res) {
 router.route('/queryAll')
     .get(userDao.queryAll);
 
+router.route('/queryAll2')
+    .get(userDao.queryAll2);
+
 router.route('/queryById')
     .get(userDao.queryById);
 
